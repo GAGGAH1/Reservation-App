@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            border-color: red;
+        }
+        
+        span {
+            color: red;
+            display: none;
+        }
+        
+        .display {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" placeholder="enter a text" id="text1" onblur="getDetails(event)">
+    <span>Empty field</span>
+    <br><br>
+
+    <input type="text" placeholder="enter a text" id="text2" onblur="getDetails(event)">
+    <span>Empty field</span>
+    <br><br>
+
+    <input type="text" placeholder="enter a text" id="text3" onblur="getDetails(event)">
+    <span>Empty field</span>
+</body>
+<script>
+    function getDetails(event) {
+        if (event.target.value === "") {
+            event.target.classList.add('error')
+            event.target.nextElementSibling.classList.add('display')
+        } else {
+            event.target.classList.remove('error')
+            event.target.nextElementSibling.classList.remove('display')
+        }
+
+    }
+</script>
+
+</html>

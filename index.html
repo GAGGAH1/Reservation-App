@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gym Class Reservation System</title>
+</head>
+<body>
+    <div class="nav">
+        <img src="images/silhouette.png">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#"><img src="images/twitter (1).png"></a>
+        <a href="#"><img src="images/instagram (1).png"></a>
+        
+        
+    </div>
+   
+    <div class="container">
+        <form id="gymForm">
+            <h1>Gym Class Reservation System</h1>
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" name="name" id="Name" >
+                <span id="name_error" class="error">Name is required</span>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="Age" >
+                <span id="age_error" class="error">Age is required</span>
+            </div>
+            <div>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" name="phone-number" id="phoneNumber">
+                <span id="phone_error" class="error">Phone Number is required</span>
+            </div>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" name="email" id="Email" >
+                <span id="email_error" class="error">Email is required</span>
+            </div>
+            <div>
+                <label for="dateOfClass">Date of Class:</label>
+                <input type="date" id="dateOfClass" name="date" >
+            </div>
+            <div>
+                <label for="timeOfClass">Time of Class:</label>
+                <input type="time" id="timeOfClass" name="timeOfClass">
+            </div>
+            <div>
+                <label for="typeOfClass">Type of Class:</label>
+                <select name="typeOfClass" id="typeOfClass" >
+                    <option value="">Select Type of Class</option>
+                    <option value="Yoga">Yoga</option>
+                    <option value="Pilates">Pilates</option>
+                    <option value="Zumba">Zumba</option>
+                </select>
+            </div>
+            <div>
+                <label for="numberOfPersons">Number of Participants:</label>
+                <input type="number" id="numberOfPersons" name="numberOfPersons" min="1">
+                <span id="persons_error" class="error">Number of participants is required</span>
+            </div>
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <div id="availableSlots"></div>
+        <div id="detailedSummary"></div>
+    </div>
+
+
+    <div class="hero-bg">
+        <img src="./images/Home.jpg">
+        <img src="images/home2.jpg">
+        <img src="images/home3.jpg">
+    </div>
+    <footer>
+            <img src="images/silhouette.png" alt="Logo">
+            <p>&copy; 2024 Fitness Fusion | Yoga | Pilates | Zumba</p>   
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
